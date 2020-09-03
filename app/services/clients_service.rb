@@ -6,7 +6,7 @@ class ClientsService
 
   NULL_RESPONSE = 'null'.freeze
 
-  def self.find_client(client_id)
+  def self.find_client(client_id) # TODO : Replace raw hash method response with a class
     response = get("/clients/#{client_id}")
     return JSON.parse(response.body) if response.ok? && response.body != NULL_RESPONSE
 
