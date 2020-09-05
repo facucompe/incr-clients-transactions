@@ -1,0 +1,3 @@
+update_transactions:
+  cron: "*/10 * * * *"
+  class: "UpdateTransactionsWorker"
