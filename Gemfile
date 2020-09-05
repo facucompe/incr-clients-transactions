@@ -40,6 +40,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
 
   gem 'faker', '~> 2.12.0'
+  
+  gem 'factory_bot_rails', '~> 6.0.0'
 
   gem 'rubocop', '~> 0.76.0', require: false
   gem 'rubocop-performance', '~> 1.5.0'
@@ -63,6 +65,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   gem 'webmock', '~> 3.8.3'
+  gem 'shoulda-matchers', '~> 4.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
