@@ -40,6 +40,8 @@ class TransactionsParser
     create_transactions(client)
     create_or_update_payment(client, Date.strptime(line.slice(PAYMENT_DATE), DATE_FORMAT))
     @transactions = []
+  rescue ServiceError
+    @transactions = []
   end
 
   def find_or_create_client(client_id)
