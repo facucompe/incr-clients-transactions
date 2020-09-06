@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 2020_09_06_161254) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.float "total_amount", null: false
-    t.float "total_discounts", null: false
-    t.float "total_with_discounts", null: false
+    t.float "total_amount", default: 0.0, null: false
+    t.float "total_discounts", default: 0.0, null: false
+    t.float "total_with_discounts", default: 0.0, null: false
     t.date "payment_date", null: false
     t.bigint "client_id"
     t.datetime "created_at", precision: 6, null: false

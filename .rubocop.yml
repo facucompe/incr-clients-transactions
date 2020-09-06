@@ -54,3 +54,6 @@ RSpec/VerifiedDoubles:
 
 RSpec/NestedGroups:
   Max: 3
+
+Rails/HelperInstanceVariable:
+  Enabled: false

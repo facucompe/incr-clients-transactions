@@ -17,8 +17,12 @@ class TransactionsParser
       '2': false
     }.freeze
 
+    DATE_FORMAT = '%Y%m%d'.freeze
+
     # Fields
     LINE_TYPE = 0
+
+    # rubocop:disable Style/MutableConstant
     # HEADER
     PAYMENT_ID = 1..32
     CURRENCY = 36..38
@@ -32,5 +36,7 @@ class TransactionsParser
 
     # FOOTER
     CLIENT_ID = 24..56
+    PAYMENT_DATE = 16..23
+    # rubocop:enable Style/MutableConstant
   end
 end
