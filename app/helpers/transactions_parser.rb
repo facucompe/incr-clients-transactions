@@ -30,5 +30,14 @@ class TransactionsParser
     client = find_or_create_client(line.slice(CLIENT_ID))
   end
 
-  def find_or_create_client(clien_external_id) end
+  def find_or_create_client(client_id)
+    client = Client.find_by(external_id: client_id)
+    client || create_client(client_id)
+  end
+
+  def create_client(client_id)
+    client = ClientsService.find_client(client_id)
+    client.save
+    client
+  end
 end
