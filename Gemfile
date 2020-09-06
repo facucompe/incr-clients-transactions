@@ -33,6 +33,12 @@ gem 'httparty', '~> 0.18.1'
 gem 'sidekiq', '~> 6.1.1'
 gem 'sidekiq-cron', '~> 1.1'
 
+gem 'versionist', '~> 2.0.1'
+
+gem 'wor-paginate', '~> 0.2.0'
+
+gem 'json-schema', '~> 2.8.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

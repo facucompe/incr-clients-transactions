@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "array, null",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "external_id": { "type": "string" },
+          "email": { "type": "string" },
+          "first_name": { "type": "string" },
+          "last_name": { "type": "string" },
+          "job": { "type": "string" },
+          "country": { "type": "string" },
+          "address": { "type": "string" },
+          "zip_code": { "type": "string" },
+          "phone": { "type": "string" },
+          "created_at": { "type": "string" },
+          "updated_at": { "type": "string" }
+        }
+      }
+    },
+    "count": { "type": "integer" },
+    "total_pages": { "type": "integer" },
+    "total_count": { "type": "integer" },
+    "current_page": { "type": "integer" },
+    "next_page": { "type": "integer, null" },
+    "previous_page": { "type": "string, null" },
+    "next_page_url": { "type": "string, null" },
+    "previous_page_url": { "type": "string, null" }
+  }
+}
