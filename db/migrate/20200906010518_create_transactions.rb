@@ -1,7 +1,7 @@
 class CreateTransactions < ActiveRecord::Migration[6.0]
   def change
     create_table :transactions do |t|
-      t.integer :amount, null: false
+      t.float :amount, null: false
       t.integer :currency, null: false
       t.boolean :approved?, null: false
 
