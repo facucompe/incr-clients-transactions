@@ -18,11 +18,11 @@ describe ClientsService do
       let(:client_id) { Faker::Alphanumeric.alpha(number: 10) }
 
       it 'finds the client and it parse it' do
-        expect(find_client).to be_a(Hash)
+        expect(find_client).to be_a(Client)
       end
 
       it 'has all fields' do
-        expect(find_client.keys.size).to eq(9)
+        expect(find_client).to be_valid
       end
     end
 
