@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Client do
   context 'when creating a client' do
-    subject(:user) { create(:client) }
+    subject(:client) { create(:client) }
 
     it { is_expected.to be_valid }
     it { is_expected.to validate_presence_of(:external_id) }
