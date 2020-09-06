@@ -1,6 +1,6 @@
 class Transaction < ApplicationRecord
   validates :amount, :currency, presence: true
-  enum currency: { ars: 1, usd: 2 }
+  enum currency: { ARS: 1, USD: 2 }
 
   belongs_to :client
 end
