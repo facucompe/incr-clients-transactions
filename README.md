@@ -30,7 +30,7 @@ Run in terminal:
 
 ```
 sudo -u postgres psql
-  CREATE ROLE "rails-bootstrap" LOGIN CREATEDB PASSWORD 'rails-bootstrap';
+CREATE ROLE "clients_transactions" LOGIN CREATEDB PASSWORD 'clients_transactions';
 ```
 
 Log out from postgres and run:
