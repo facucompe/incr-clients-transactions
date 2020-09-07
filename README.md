@@ -1,24 +1,51 @@
-# README
+# clients-transactions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
+Follow this [guide](https://gorails.com/setup) to install ruby and postgresql.
 
-Things you may want to cover:
+This service needs Redis to execute cron jobs. You can install Redis or dockerize it with:
 
-* Ruby version
+```bash
+docker run --name some-redis -d redis
+```
 
-* System dependencies
+### Installing Rails gems
 
-* Configuration
+Install Bundler.
+```
+gem install bundler --no-ri --no-rdoc
+rbenv rehash
+```
+Install basic dependencies if you are using Ubuntu:
+```
+sudo apt-get install build-essential libpq-dev nodejs
+```
+Install all the gems included in the project.
+```
+bundle install
+```
+### Database Setup
 
-* Database creation
+Run in terminal:
 
-* Database initialization
+```
+sudo -u postgres psql
+  CREATE ROLE "rails-bootstrap" LOGIN CREATEDB PASSWORD 'rails-bootstrap';
+```
 
-* How to run the test suite
+Log out from postgres and run:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle exec rake db:create db:migrate
+```
 
-* Deployment instructions
+# Run
+Run server with:
+```
+rails server
+```
+Run sidekiq to execute cron jobs
+```
+bundle exec sidekiq
+```
 
-* ...
